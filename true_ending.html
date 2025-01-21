@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storyboard lesson</title>
+    <style>
+    .myDiv_8{
+        background-color: gray;
+        height: 105vh;
+        position: absolute;
+        top: 40px;
+        left: 60px;
+        right: 60px;
+        margin: 0 auto;
+        z-index:2;
+        border: 10px groove darkgray;
+    }
+    /*This Div is a gray container for all the options of the game (to imitate the appearance of a submarine),this Div is positioned with offsets top:40px, left:60px and right:60px. It is also styled with a gray border. It's higher z-index makes sure that it is above .myDiv */
+    .myDiv{
+        background-color: gray;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 90px;
+    }
+    /* This creates a full-viewport container with a gray background, acting as a base layer for content and image background. height: 100vh ensures that the Div spans the entire height of the screen horiziontally using margin: 0 auto.*/
+    .dive{
+        border: 10px;
+    } 
+    /* unused div */
+    .myDiv_2{
+        position: absolute;
+        top: 8%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 65vh;
+        width: 150vh;
+        background: darkgray;
+        z-index: 3;
+        text-align: left;
+        border: 20px groove darkgray;
+        font-size: 30px;
+    }
+    /* Displays dialogue in a dark gray container. centered horiziontally and vertically with width and height of 65vh and 150vh. The z-index: 3 makes it so that it's above myDiv 8. */
+    .myDiv_3{
+        position: absolute;
+        bottom:-40px;
+        left:6.3%;
+        background: darkgrey;
+        z-index: 3;
+        border: 10px groove darkgray;
+        width: 700px;
+        height: 180px;
+        font-size: 40px;
+        text-align:center;
+    }
+    /*A smaller clickable gray box on the bottom left of the screen with a border which allows you to "accept" the ending you got to. I used position:absolute since it takes the div out of the normal flow of the document, other elements will react as if this element never existed meaning that it won't affect the layout of other elements. */
+    #spacer {
+        height: 5px;
+    }
+    /* adds spacing for Div 2*/
+    
+
+    .myDiv_5{
+        position: absolute;
+        bottom:-40px;
+        right:6.3%;
+        background: darkgrey;
+        z-index: 3;
+        border: 10px groove darkgray;
+        width: 500px;
+        height: 60px;
+        font-size: 40px;
+        text-align: center;
+    }
+    /* A smaller clickable gray box with a border on the bottom right of the screen which allows you to "reset" and restart the game, making sure that there are no dead end pages. I use the absolute function due to the same reasons listed for .myDiv3. */
+    .myDiv_6{
+        position: absolute;
+        bottom:80px;
+        right: 6.3%;
+        background: darkgrey;
+        z-index: 3;
+        border: 10px groove darkgray;
+        width: 500px;
+        height: 60px;
+        font-size: 40px;
+        text-align: center;
+    }
+    /*A smaller clickable gray box with a border on the bottom right of the screen above the which allows you to move back to your last choice, if the user is unsatisifed with their current outcome in the game. This makes it so that there are no dead end pages.*/
+    .myDiv_7{
+        position: absolute;
+        top:35%;
+        left: 60%;
+        z-index:4;
+    }
+    /*This div creates a container for the image to be put inside and to make sure that it is above the other divs..*/
+    #image {
+        position: absolute;
+        bottom: -150px;
+        right: -390px;
+    }
+    /*Specific positioning for image in .myDiv7*/
+
+    </style>
+</head>
+<body>
+<div class="myDiv">
+<img src="hopefully_pls.png" alt="Picture of submarine deep underwater." align="center" style="height:120vh;">
+        <!--importing the image that shows the background into this html, and giving it the right size, positioning and placement in the file. This image gives the games a underwater feeling.-->
+
+</div>
+<div class="myDiv_8">
+</div>
+
+<div class="myDiv_2">
+<div id="spacer">
+        <!--Adds just a bit of space between the text and top of div-->
+
+</div>
+<a>The captain tells you the truth. <br><br> Due the sun’s death, earth has also started to reach it’s limits, and soon <br> all crews on submarines will run out of food and resources. <br><br> However, there is a portal in the abyssal plains that is able <br> to transport the entire crew to an alternate Earth. <br><br> He decided to accept this mission to go the the portal. <br><br> He also tells you that he has heard of the recent disappearances, <br>and that he has prepared a force field just in case. <br><br> You believe him, and the submarine descends down to the plains.</a>
+        <!--This is the dialogue in Div2. -->
+
+</div>
+
+<div class="myDiv_3">
+<a href="storyboard.html">Accept</a>
+        <!--Hyperlink reference to direct you back to back to beginning after you have achieved the ending-->
+
+</div>
+
+<div class="myDiv_4">
+
+</div>
+
+<div class="myDiv_5">
+<a href="./storyboard.html">Reset</a>
+        <!--Hyperlink reference to reset the game to the beginning.-->
+
+</div>
+
+<div class="myDiv_6">
+<a href="./abyssal_plains1.html">Go Back to previous decesion</a>
+        <!--Hyperlink reference to take the user back to their previous decesion-->
+
+</div>
+<div class="myDiv_7">
+<img src="no_life_sub.jpg" alt="The picture of a giant eye overlooking a submarine." style="height: 220px" id="image">
+        <!--importing the image that shows the ending into this html, and giving it the right size, positioning and placement in the file-->
+
+</div>
+</body>
+</html>
+
+
